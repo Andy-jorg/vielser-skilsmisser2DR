@@ -572,7 +572,7 @@ vielsestype_plot <- plot_ly(data = vielsestype,
                type = 'scatter', 
                mode = 'lines', 
                color = ~TYPE, 
-               colors = c("#90918F", "#eb7974"))
+               colors = c("#eb7974", "#90918F"))
 
 vielsestype_plot <- vielsestype_plot |> 
   layout(
@@ -647,7 +647,7 @@ map_skils <- leaflet(skils_map) |>
               labelOptions = labelOptions(
                 textsize = "15px",
                 direction = "auto"),
-              group = "Ægteskabets varighed (Mean)",
+              group = "Gns. Ægteskabsvarighed (År)",
               highlightOptions = highlightOptions(
                 weight = 4,
                 color = "#666",
@@ -689,7 +689,7 @@ map_skils <- leaflet(skils_map) |>
                 fillOpacity = 0.7,
                 bringToFront = TRUE)) |>
   addLayersControl(
-    baseGroups=c("Ægteskabets varighed (Mean)",
+    baseGroups=c("Gns. Ægteskabsvarighed (År)",
                  "Skilsmisse Gennemsnitsalder (Mand)",
                  "Skilsmisse Gennemsnitsalder (Kvinde)"
                  ),
@@ -706,21 +706,54 @@ skilsmisse_total <- readRDS("01_data_cleaning/03_output/skilsmisse_alder_varighe
 
 ```{r}
 # Plot
-skils_plot <- skilsmisse_total |> 
+skilsmisse_total <- skilsmisse_total |> 
   group_by(year, gender) |> 
   summarise(mean_skilsmisse_alder = mean(mean_skilsmisse_alder, na.rm = TRUE),
             mean_marriage_varighed = mean(mean_marriage_varighed, na.rm = TRUE)) |> 
-  ungroup() |> 
-  ggplot(aes(x=year, y = mean_skilsmisse_alder, group = gender, color= gender)) + 
-  geom_line() + 
-  geom_point() +
-  scale_color_manual(values = c("#90918F", "#eb7974")) +
-  scale_x_continuous(breaks=seq(2006, 2023, 5)) +
-  xlab("") + 
-  ylab("Alder") +
-  theme_classic() +
-  theme(legend.position = "bottom",
-        legend.title = element_blank()) 
+  ungroup()
+
+# skils_plot <- skilsmisse_total |> 
+#   ungroup() |> 
+#   ggplot(aes(x=year, y = mean_skilsmisse_alder, group = gender, color= gender)) + 
+#   geom_line() + 
+#   geom_point() +
+#   scale_color_manual(values = c("#eb7974", "#90918F")) +
+#   scale_x_continuous(breaks=seq(2006, 2023, 5)) +
+#   xlab("") + 
+#   ylab("Alder") +
+#   theme_classic() +
+#   theme(legend.position = "bottom",
+#         legend.title = element_blank()) 
+
+
+skils_plot <- plot_ly(data = skilsmisse_total, 
+                    x = ~year, 
+                    y = ~mean_skilsmisse_alder, 
+                    type = 'scatter', 
+                    mode = 'lines+markers',
+                    color = ~gender, 
+                    colors = c("#eb7974", "#90918F")) |> 
+  layout(
+    xaxis = list(
+      title = "",
+      tickvals = seq(2006, 2023, 5),
+      showgrid = FALSE
+    ),
+    yaxis = list(
+      title = "Alder",
+      showgrid = FALSE
+    ),
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = -0.2,
+      title = list(text = "")
+    ),
+    showlegend = TRUE,
+    plot_bgcolor = 'rgba(0,0,0,0)',
+    paper_bgcolor = 'rgba(0,0,0,0)'
+  )
 
 ```
 
@@ -831,7 +864,7 @@ vielsestype_plot
 ### Row
 
 ```{r}
-#| title: "Gennemsnitsalder for skilsmisse og ægteskabsvarighed (2023)"
+#| title: "Ægteskabsvarighed og Gennemsnitsalder for Skilsmisse (2023)"
 map_skils
 ```
 
