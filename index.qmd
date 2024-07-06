@@ -2,4 +2,26 @@
 title: "Homepage til Vielser og Skilsmisser i DK"
 ---
 
-Det her er landingssiden. Gå ind på /vielser-skilsmisser2DR.html
+# Om Denne Side
+
+Den her side har til formål at vise brugen af Quarto dashboards
+
+## Hvad Du Finder Her
+
+-   **Tutorials og Vejledninger**: Trin-for-trin vejledninger til at hjælpe dig i gang med R og knitr.
+-   **Projekteksempler**: Fremhævning af nogle af de spændende projekter, jeg har arbejdet på.
+-   **Tips og Tricks**: Brugbare tips til at gøre din dataanalyse mere effektiv og effektiv.
+
+## Om Mig
+
+Jeg brænder for data science og er dedikeret til at gøre kompleks dataanalyse tilgængelig og forståelig. Med en stærk baggrund i statistik og programmering nyder jeg at udforske de mange muligheder R har at byde på
+
+## Kontakt
+
+Du er velkommen til at udforske indholdet, og tøv ikke med at kontakte mig, hvis du har spørgsmål eller forslag. Du kan finde koden bag den her side på GitHub:
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/Andy-jorg/vielser-skilsmisser2DR)
+
+Tak fordi du besøgte, og jeg håber, at du finder dashboardet værdifuldt!
+
+------------------------------------------------------------------------

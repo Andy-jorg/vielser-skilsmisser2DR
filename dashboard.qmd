@@ -848,6 +848,23 @@ Test text for first row
 skils_plot
 ```
 
-# Data
 
 # About
+
+## Row {.flow}
+
+::: card
+::: card-header
+About
+:::
+
+::: card-body
+📊 Det her dashboard viser data om vielser og skilsmisser i Danmark og er bygget med [Quarto](https://quarto.org/docs/dashboards/). Dataet som er blevet brugt består af tabellerne BEV3C, BEFOLK1, FOLK1A, VIE1, VIEDAG, VIE7, VIE307 og SKI107 fra Danmarks Statistik  [Statistikbanken](https://www.statistikbanken.dk/statbank5a/default.asp?w=1920).
+
+**Note:** Dashboardet er lavet som en del af ansøgningen til DR Analyse.
+
+Sorce koden for det her dashboard kan findes på min github:
+
+[<i class="bi bi-file-code"></i> Repository](https://github.com/Andy-jorg/vielser-skilsmisser2DR)
+:::
+:::
