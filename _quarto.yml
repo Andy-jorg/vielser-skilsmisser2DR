@@ -1,15 +1,19 @@
 project:
   type: website
 
+
 website:
   title: "vielser-skilsmisser2DR"
   page-navigation: true
   sidebar:
+    title: "Andy 2024"
+    search: true
+    collapse-level: 1
     contents: 
-      -href: index.qmd
-       text: Home
-      -href: dashboard.qmd
-       text: Dashboard 
+      - href: index.qmd
+        text: Home
+      - href: dashboard.qmd
+        text: Dashboard
 
 format:
   html:
