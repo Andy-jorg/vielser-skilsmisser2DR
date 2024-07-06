@@ -26,7 +26,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libproj-dev    
+          sudo apt-get install -y libproj-dev libgdal-dev  
 
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
