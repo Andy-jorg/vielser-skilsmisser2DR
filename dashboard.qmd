@@ -97,10 +97,12 @@ vielser_skils_over_tid  <- vielser_skils_over_tid  |>
   layout(
     xaxis = list(
       title = "",
-      tickvals = seq(1980, 2023, 5)
+      tickvals = seq(1980, 2023, 5),
+      showgrid = FALSE
     ),
     yaxis = list(
-      title = "Antal"
+      title = "Antal",
+      showgrid = FALSE
     ),
     legend = list(
       orientation = "h",
@@ -109,29 +111,47 @@ vielser_skils_over_tid  <- vielser_skils_over_tid  |>
       y = -0.2
     ),
     showlegend = TRUE,
-    plot_bgcolor = 'rgba(0,0,0,0)',
-    paper_bgcolor = 'rgba(0,0,0,0)'
+    plot_bgcolor = 'white',
+    paper_bgcolor = 'white',
+    annotations = list(
+      list(
+        x = 2011,
+        y = max(data_year$value[data_year$year == 2011]),
+        xref = 'x',
+        yref = 'y',
+        text = "Fra 2008 til 2011 faldt antal vielser med 28 pct. point",
+        showarrow = TRUE,
+        arrowhead = 2,
+        ax = -100,
+        ay = -50
+      )
+    )
   )
+
 ```
 
 ```{r}
-forskel_over_tid <- plot_ly(data = data_year, 
-               x = ~year, 
-               y = ~change_year, 
-               type = 'scatter', 
-               mode = 'lines+markers', 
-               color = ~action, 
-               colors = c("#90918F", "#eb7974"))
+forskel_over_tid <- plot_ly(
+  data = data_year, 
+  x = ~year, 
+  y = ~change_year, 
+  type = 'scatter', 
+  mode = 'lines+markers', 
+  color = ~action, 
+  colors = c("#90918F", "#eb7974")
+)
 
 forskel_over_tid <- forskel_over_tid |> 
   layout(
     xaxis = list(
       title = "",
-      tickvals = seq(1980, 2023, 5)
+      tickvals = seq(1980, 2023, 5),
+      showgrid = FALSE
     ),
     yaxis = list(
       title = "% forskel (år)",
-      tickformat = ".0%"
+      tickformat = ".0%",
+      showgrid = FALSE
     ),
     legend = list(
       orientation = "h",
@@ -140,8 +160,21 @@ forskel_over_tid <- forskel_over_tid |>
       y = -0.2
     ),
     showlegend = TRUE,
-    plot_bgcolor = 'rgba(0,0,0,0)',
-    paper_bgcolor = 'rgba(0,0,0,0)'
+    plot_bgcolor = 'white',
+    paper_bgcolor = 'white',
+    annotations = list(
+      list(
+        x = 2020,
+        y = max(data_year$change_year[data_year$year == 2020]),
+        xref = 'x',
+        yref = 'y',
+        text = "Fra 2019 til 2020 var der en stigning i antal skilsmisser på 49 pct. point",
+        showarrow = TRUE,
+        arrowhead = 2,
+        ax = -50,
+        ay = -50
+      )
+    )
   )
 ```
 
@@ -321,10 +354,12 @@ age_viede_plot <- age_viede_plot |>
   layout(
     xaxis = list(
       title = "",
-      tickvals = seq(1900, 2025, 25)
+      tickvals = seq(1900, 2025, 25),
+      showgrid = FALSE
     ),
     yaxis = list(
-      title = "Alder"
+      title = "Alder",
+      showgrid = FALSE
     ),
         legend = list(
       orientation = "h",
@@ -543,10 +578,12 @@ vielsestype_plot <- vielsestype_plot |>
   layout(
     xaxis = list(
       title = "",
-      tickvals = seq(1990, 2023, 5)
+      tickvals = seq(1990, 2023, 5),
+      showgrid = FALSE
     ),
     yaxis = list(
-      title = "Antal"
+      title = "Antal",
+      showgrid = FALSE
     ),
     legend = list(
       orientation = "h",
@@ -780,7 +817,7 @@ most_pop_day_month
 least_pop_day_month
 ```
 
-### Row
+### Row {height=30%}
 
 ```{r}
 #| title: "Udvikling I Vielser Mellem to af Samme Køn"
