@@ -53,7 +53,8 @@ mean_skils <- means |>
 
 ```{r}
 # Over tid
-data_year <- readRDS("01_data_cleaning/03_output/vielser_skilsmisser_year.rds")
+data_year <- readRDS("01_data_cleaning/03_output/vielser_skilsmisser_year.rds") |> 
+  mutate(value = round(value, 1))
 
 ```
 
@@ -123,7 +124,7 @@ vielser_skils_over_tid  <- vielser_skils_over_tid  |>
         showarrow = TRUE,
         arrowhead = 2,
         ax = -100,
-        ay = -50
+        ay = 40
       )
     )
   )
@@ -607,8 +608,8 @@ skils_map <- st_transform(kommuner_skils, crs = '+proj=longlat +datum=WGS84')
 skils_map <- st_simplify(skils_map, dTolerance = 75)
 
 skils_map <- skils_map |> 
-  mutate(label_skils_kvinde = paste0(navn, ": ", mean_skilsmisse_alder_Kvinde),
-         label_skils_mand = paste0(navn, ": ", mean_skilsmisse_alder_Mand),
+  mutate(label_skils_kvinde = paste0(navn, ": ", round(mean_skilsmisse_alder_Kvinde)),
+         label_skils_mand = paste0(navn, ": ", round(mean_skilsmisse_alder_Mand)),
          label_average_marriage_length = paste0(navn, ": ", round(mean_marriage_varighed_Mand)))
 
 
@@ -728,7 +729,7 @@ skilsmisse_total <- skilsmisse_total |>
 
 skils_plot <- plot_ly(data = skilsmisse_total, 
                     x = ~year, 
-                    y = ~mean_skilsmisse_alder, 
+                    y = ~round(mean_skilsmisse_alder, 1), 
                     type = 'scatter', 
                     mode = 'lines+markers',
                     color = ~gender, 
@@ -872,7 +873,9 @@ map_skils
 
 ### Row {height="10%"}
 
-Test text for first row
+**Udviklingen i gennemsnitsskilsmissealder er ens for mænd og kvinder** 
+
+Forskellen i mænd og kvinders alder når de bliver skilt er i gennemsnit 3 år
 
 ### Row
 
