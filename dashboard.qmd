@@ -503,6 +503,7 @@ year_month <- vielsesdag_year_month |>
          month = fct_reorder(month, month_num)) |> 
   ggplot(aes(x = month, y = vielser)) +
   geom_col() + 
+   scale_x_discrete(breaks = c("J", "Apr", "Jul", "O"), labels = c("Jan", "Apr", "Jul", "Oct")) +
   facet_wrap(vars(year)) + 
   geom_col(fill = "#eb7974") + 
  # scale_color_manual(values = c("#eb7974")) +
@@ -895,7 +896,7 @@ About
 :::
 
 ::: card-body
-📊 Det her dashboard viser data om vielser og skilsmisser i Danmark og er bygget med [Quarto](https://quarto.org/docs/dashboards/). Dataet som er blevet brugt består af tabellerne BEV3C, BEFOLK1, FOLK1A, VIE1, VIEDAG, VIE7, VIE307 og SKI107 fra Danmarks Statistik  [Statistikbanken](https://www.statistikbanken.dk/statbank5a/default.asp?w=1920).
+Det her dashboard viser data om vielser og skilsmisser i Danmark og er bygget med [Quarto](https://quarto.org/docs/dashboards/). Dataet som er blevet brugt består af tabellerne BEV3C, BEFOLK1, FOLK1A, VIE1, VIEDAG, VIE7, VIE307 og SKI107 fra Danmarks Statistik  [Statistikbanken](https://www.statistikbanken.dk/statbank5a/default.asp?w=1920).
 
 **Note:** Dashboardet er lavet som en del af ansøgningen til DR Analyse.
 
