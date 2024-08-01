@@ -4,7 +4,7 @@ title: "Homepage til Vielser og Skilsmisser i DK"
 
 # Om Denne Side
 
-Den her side har til formål at supplementere min ansøgning til DR Analyse of afprøve Quarto Dashboards
+Den her side har til formål at afprøve Quarto Dashboards
 
 ## Hvad Du Finder Her
 
