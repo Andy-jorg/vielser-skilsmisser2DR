@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Homepage til Vielser og Skilsmisser i DK",
     "section": "",
-    "text": "Den her side har til formål at vise brugen af Quarto dashboards\n\n\n\nTutorials og Vejledninger: Trin-for-trin vejledninger til at hjælpe dig i gang med R og knitr.\nProjekteksempler: Fremhævning af nogle af de spændende projekter, jeg har arbejdet på.\nTips og Tricks: Brugbare tips til at gøre din dataanalyse mere effektiv og effektiv.\n\n\n\n\nJeg brænder for data science og er dedikeret til at gøre kompleks dataanalyse tilgængelig og forståelig. Med en stærk baggrund i statistik og programmering nyder jeg at udforske de mange muligheder R har at byde på\n\n\n\nDu er velkommen til at udforske indholdet, og tøv ikke med at kontakte mig, hvis du har spørgsmål eller forslag. Du kan finde koden bag den her side på GitHub:\n\n\n\nGitHub Repository\n\n\nTak fordi du besøgte, og jeg håber, at du finder dashboardet værdifuldt!",
+    "text": "Den her side har til formål at afprøve Quarto Dashboards\n\n\n\nTutorials og Vejledninger: Dashboard om Vielser og Skilsmisser lavet på baggrund af data fra Danmarks Statistik\n\n\n\n\nJeg brænder for data science og er dedikeret til at gøre kompleks dataanalyse tilgængelig og forståelig. Med en stærk baggrund i statistik og programmering nyder jeg at udforske de mange muligheder R, Python og andre tools har at byde på\n\n\n\nDu er velkommen til at udforske indholdet, og tøv ikke med at kontakte mig, hvis du har spørgsmål eller forslag. Du kan finde koden bag den her side på GitHub:\n\n\n\nGitHub Repository",
     "crumbs": [
       "Home"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#hvad-du-finder-her",
     "title": "Homepage til Vielser og Skilsmisser i DK",
     "section": "",
-    "text": "Tutorials og Vejledninger: Trin-for-trin vejledninger til at hjælpe dig i gang med R og knitr.\nProjekteksempler: Fremhævning af nogle af de spændende projekter, jeg har arbejdet på.\nTips og Tricks: Brugbare tips til at gøre din dataanalyse mere effektiv og effektiv.",
+    "text": "Tutorials og Vejledninger: Dashboard om Vielser og Skilsmisser lavet på baggrund af data fra Danmarks Statistik",
     "crumbs": [
       "Home"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#om-mig",
     "title": "Homepage til Vielser og Skilsmisser i DK",
     "section": "",
-    "text": "Jeg brænder for data science og er dedikeret til at gøre kompleks dataanalyse tilgængelig og forståelig. Med en stærk baggrund i statistik og programmering nyder jeg at udforske de mange muligheder R har at byde på",
+    "text": "Jeg brænder for data science og er dedikeret til at gøre kompleks dataanalyse tilgængelig og forståelig. Med en stærk baggrund i statistik og programmering nyder jeg at udforske de mange muligheder R, Python og andre tools har at byde på",
     "crumbs": [
       "Home"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#kontakt",
     "title": "Homepage til Vielser og Skilsmisser i DK",
     "section": "",
-    "text": "Du er velkommen til at udforske indholdet, og tøv ikke med at kontakte mig, hvis du har spørgsmål eller forslag. Du kan finde koden bag den her side på GitHub:\n\n\n\nGitHub Repository\n\n\nTak fordi du besøgte, og jeg håber, at du finder dashboardet værdifuldt!",
+    "text": "Du er velkommen til at udforske indholdet, og tøv ikke med at kontakte mig, hvis du har spørgsmål eller forslag. Du kan finde koden bag den her side på GitHub:\n\n\n\nGitHub Repository",
     "crumbs": [
       "Home"
     ]
